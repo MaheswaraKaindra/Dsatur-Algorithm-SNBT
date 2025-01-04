@@ -45,7 +45,7 @@ def create_room_graph(m, n, room_type):
 
     return G
 
-def main():
+def main_insert_room_type():
     print("Pilih tipe ruangan:")
     print("1. Tipe 1 (Derajat: 3, 5, 8)")
     print("2. Tipe 2 (Derajat: 2, 3, 4)")
@@ -64,5 +64,6 @@ def main():
         print("Simpul:", list(graph.nodes))
         print("Sisi:", list(graph.edges))
 
-main()
+# Will be deleted later
+main_insert_room_type()
 
