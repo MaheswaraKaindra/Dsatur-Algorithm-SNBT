@@ -55,7 +55,7 @@ def create_room_graph(m, n, room_type):
         # Peserta Pinggir
         elif x in [0, m - 1] or y in [0, n - 1]:
             neighbors = neighbors[:3]  
-            
+
         for nx, ny in neighbors:
             G.add_edge((x, y), (nx, ny))
 
@@ -68,25 +68,4 @@ def create_room_graph(m, n, room_type):
                 add_edges_tipe2(i, j)
 
     return G
-
-def main_insert_room_type():
-    print("Pilih tipe ruangan:")
-    print("1. Tipe 1")
-    print("2. Tipe 2")
-    
-    room_type = int(input("Masukkan pilihan tipe (1/2): "))
-    if room_type not in [1, 2]:
-        print("Pilihan tidak valid.")
-        return None
-
-    m = int(input("Masukkan panjang (m): "))
-    n = int(input("Masukkan lebar (n): ")) 
-    
-    graph = create_room_graph(m, n, room_type)
-    print(f"Graf berhasil dibuat dengan {len(graph.nodes)} simpul dan {len(graph.edges)} sisi.")
-    if graph:
-        print("Simpul:", list(graph.nodes))
-        print("Sisi:", list(graph.edges))
-    
-    return graph
 

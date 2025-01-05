@@ -1,11 +1,10 @@
 import networkx as nx
-from insert_room_type import main_insert_room_type
 
 def dsatur_algorithm(graph):
     """
     Mewarnai simpul-simpul pada graf dengan algoritma DSatur berdasarkan metode menurut Brelaz (1979)
     """
-    
+
     # Inisialisasi
     colors = {}
     degrees = {node: len(list(graph.neighbors(node))) for node in graph.nodes}
@@ -34,14 +33,3 @@ def dsatur_algorithm(graph):
                 saturation[neighbor] = len({colors[n] for n in graph.neighbors(neighbor) if n in colors})
     
     return colors
-
-def main_dsatur_algorithm(graph):
-    colors = dsatur_algorithm(graph)
-    print("Pewarnaan simpul:")
-    for node, color in colors.items():
-        print(f"Simpul {node}: warna {color}")
-
-if __name__ == "__main__":
-    graph = main_insert_room_type()
-    if graph:
-        main_dsatur_algorithm(graph)
