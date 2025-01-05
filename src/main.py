@@ -1,6 +1,6 @@
 from dsatur_algorithm import dsatur_algorithm
 from insert_room_type import create_room_graph
-from visualisasi import visualize_colored_graph
+from visualization import visualize_colored_graph
 
 def main():
     print("Pilih tipe ruangan:")
