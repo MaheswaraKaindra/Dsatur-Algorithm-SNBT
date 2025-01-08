@@ -71,12 +71,7 @@ Penelitian ini memanfaatkan **Python** dengan pustaka seperti `NetworkX` dan `Ma
    - Pilih tipe ruangan dan masukkan dimensi ruangan (m x n).
    - Algoritma akan menghitung jumlah warna (paket soal) yang dibutuhkan.
    ```bash
-   python src/dsatur_algorithm.py
-   ```
-
-4. **Visualisasi Graf**:
-   ```bash
-   python src/visualization.py
+   python src/main.py
    ```
 
 ---
